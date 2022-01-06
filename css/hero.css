@@ -1,0 +1,45 @@
+.hero__wrapper {
+    background-image: url('../img/bg.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.hero__wrapper::before {
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--second-brand-color);
+    position: absolute;
+}
+.hero {
+    padding: 45rem 0 20rem;
+    position: relative;
+}
+.block {
+    text-align: center;
+    background-color: var(--sub-text-color);
+    padding: 5rem;
+    position: relative;
+}
+.block::after {
+    display: block;
+    content: '';
+    position: absolute;
+    width: 30%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 3rem;
+    height: .2rem;
+    background-color: var(--main-text-color);
+}
+
+
+@media screen and (min-width: 1024px) {
+    .block::after {
+        height: .5rem;
+    }
+}
